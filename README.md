@@ -94,7 +94,7 @@ amc-sdr-internship/
 │                                          bpsk.py, qpsk.py, 8psk.py, 16psk.py,
 │                                          16qam.py, 32qam.py, 64qam.py, 256qam.py
 │
-├── 1st best model for 8 modulations.zip
+├── Best_Model.zip
 │                                       Best-performing real-time classifier:
 │                                          model12.py                 (integrated TX/RX + inference script)
 │                                          suyash_resnet_weights.pth  (trained RadioResNet95 weights)
@@ -197,7 +197,7 @@ pip install numpy scipy matplotlib torch
    git clone https://github.com/mansi-ambwani/amc-sdr-internship.git
    cd amc-sdr-internship
    unzip "hardware pipeline.zip"
-   unzip "1st best model for 8 modulations.zip"
+   unzip "Best_Model.zip"
    ```
 
 2. **Generate a dataset (optional — a pre-captured dataset is already included as `.npy` files):**
@@ -208,7 +208,7 @@ pip install numpy scipy matplotlib torch
 
 4. **Run real-time classification:**
    ```bash
-   python "1st best model for 8 modulations/model12.py"
+   python "Best_Model/model12.py"
    ```
    This drives both USRP radios live: for each modulation it transmits a fresh random payload, receives and processes it through the full sync/CFO/equalization pipeline, classifies each 1024-sample window with RadioResNet95, takes a majority vote per frame, and compiles a running confusion matrix at the end of the run.
 
@@ -266,5 +266,3 @@ The complete methodology, mathematical derivations (RRC pulse shaping, CFO estim
 9. S. Y. Chaudhry and J. Haider, "Demonstration of a USRP-based Communication Network for Internet-of-Things (IoT) Application."
 
 ---
-
-*This project was completed as part of a one-month research internship in the Department of Electronics and Communication Engineering, IIT Roorkee, under the supervision of Dr. Anshul Jaiswal.*
