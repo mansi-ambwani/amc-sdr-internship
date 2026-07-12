@@ -1,6 +1,6 @@
 # Automatic Modulation Classification using Deep Learning and a Software-Defined Radio Pipeline
 
-Real-time classification of 8 PSK/QAM modulation schemes, built end-to-end during a one-month research internship at the Department of Electronics and Communication Engineering, IIT Roorkee (Supervisor: Dr. Anshul Jaiswal).
+Built end-to-end Real-time classification of 8 PSK/QAM modulation schemes, 
 
 The project spans three tightly coupled pieces:
 1. **Over-the-air dataset generation** — a full USRP transmit/receive pipeline (framing, RRC pulse shaping, correlation-based sync, CFO correction, channel equalization, Costas-loop phase tracking) implemented from scratch for 8 modulation schemes.
@@ -18,7 +18,7 @@ The project spans three tightly coupled pieces:
 
 The entire PSK family (BPSK, QPSK, 8-PSK, 16-PSK) and 32-QAM classify reliably live. The three square, Gray-coded QAM orders — 16-QAM, 64-QAM, and 256-QAM — are frequently confused with one another in live testing despite the near-perfect offline result. **The root cause of this gap was not conclusively identified within the internship timeframe** — see [Known Limitations](#known-limitations--future-work) below. A candidate fix (widening the receiver's gain-estimation window) is implemented in some of the experiment branches under `models/`, but was not independently verified to resolve the issue.
 
-Full methodology, derivations, and analysis are in [`report/`](./report).
+Full methodology, derivations, and analysis are in [`report/AMC_Internship_Report_MansiAmbwani.docx`](./report).
 
 ---
 
