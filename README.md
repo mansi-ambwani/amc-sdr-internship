@@ -18,7 +18,7 @@ The project spans three tightly coupled pieces:
 
 The entire PSK family (BPSK, QPSK, 8-PSK, 16-PSK) and 32-QAM classify reliably live. The three square, Gray-coded QAM orders — 16-QAM, 64-QAM, and 256-QAM — are frequently confused with one another in live testing despite the near-perfect offline result. **The root cause of this gap was not conclusively identified within the internship timeframe** — see [Known Limitations](#known-limitations--future-work) below. A candidate fix (widening the receiver's gain-estimation window) is implemented in some of the experiment branches under `models/`, but was not independently verified to resolve the issue.
 
-Full methodology, derivations, and analysis are in [`report/AMC_report_MansiAmbwani.docx`](./AMC_report_MansiAmbwani.docx).
+Full methodology, derivations, and analysis are in [`report/AMC_report_MansiAmbwani.docx`](./AMC_report_MansiAmbwani.pdf).
 
 ---
 
